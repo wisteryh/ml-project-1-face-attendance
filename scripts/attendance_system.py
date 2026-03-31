@@ -28,7 +28,7 @@ import pandas as pd
 
 
 # ===== 配置区域 =====
-YOLO_MODEL_PATH = "runs/detect/runs/face/exp17/weights/best.pt"   # YOLO 模型路径
+YOLO_MODEL_PATH = "runs/face/exp1/weights/best.pt"   # YOLO 模型路径
 FACE_DB_PATH = "face_db/encodings.pkl"                # 人脸特征库路径
 CAMERA_ID = 0                                          # 摄像头编号（0=默认）
 CONFIDENCE_THRESHOLD = 0.5                             # YOLO 检测置信度阈值
