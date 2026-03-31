@@ -12,10 +12,10 @@ def main():
     # ===== 配置区域（根据需要修改）=====
     MODEL_SIZE = "yolo11n.pt"       # 可选：yolo11n.pt / yolo11s.pt / yolo11m.pt
     DATA_YAML = "dataset/face_data.yaml"
-    EPOCHS = 100
-    IMG_SIZE = 640
-    BATCH_SIZE = 16                 # 显存不足请改为 8 或 4
-    DEVICE = 0                      # GPU编号，无GPU填 'cpu'
+    EPOCHS = 80
+    IMG_SIZE = 480
+    BATCH_SIZE = 8                 # 显存不足请改为 8 或 4
+    DEVICE = 'cpu'                     # GPU编号，无GPU填 'cpu'
     PROJECT = "runs/face"
     NAME = "exp1"
     PATIENCE = 20                   # 早停耐心值
@@ -44,6 +44,7 @@ def main():
         save=True,
         plots=True,
         verbose=True,
+        workers=0,
     )
 
     print(f"\n训练完成！")
